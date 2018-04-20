@@ -22,3 +22,15 @@ cookbook_file '/var/www/html/.htaccess' do
 	mode '0640'
 	action :create
 end
+
+file '/var/www/html/index.html' do
+	action :delete
+end
+
+
+link '/var/www/html/index.html' do
+	to '/var/www/html/fuse.html'
+	link_type :symbolic
+	action :create
+end
+
