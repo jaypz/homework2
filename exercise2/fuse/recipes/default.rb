@@ -17,7 +17,7 @@ end
 
 cookbook_file '/var/www/html/.htaccess' do
 	source 'htaccess'
-	onwer 'root'
+	owner 'root'
 	group 'www-data'
 	mode '0640'
 	action :create
